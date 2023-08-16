@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlecenia</title>
+    <script src="https://kit.fontawesome.com/f4b33a4485.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><i class="fa-regular fa-keyboard"></i>Nowe zlecenie</h1>
+    </header>
+
+    <main>
+
+        <div class="order-body">
+            <div class="control-buttons">
+                <button class="add-new"><i class="fa-solid fa-plus"></i>Dodaj</button>
+                <button class="delete-all"><i class="fa-regular fa-trash-can"></i>Usuń wszystko</button>
+            </div>
+
+            <div class="order-list">
+                <!-- <p class="code">Kod</p>
+                <p class="customer">Zleceniodawca</p>
+                <p class="order">Zamówienie</p>
+                <p class="deadline">Termin</p>
+                <p class="options">Opcje</p> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Kod</td>
+                            <td>Zleceniodawca</td>
+                            <td>Produkt</td>
+                            <td>Ilość</td>
+                            <td>Termin</td>
+                            <td>Opcje</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="order-panel">
+        <h2>Wpisz zamówienie</h2>
+        <div class="inputs-panel">
+            
+            <label for="in-customer">Zleceniodawca</label>
+            <input type="text" id="in-customer">
+            
+            <label for="choose-product">Wybierz produkt</label>
+            <select id="choose-product" onchange="chooseProduct()">
+                <option value="none" selected disabled>---Wybierz---</option>
+                <option value="0">Stolik kawowy czarny</option>
+                <option value="1">Stolik kawowy biały</option>
+                <option value="2">Fotel</option>
+                <option value="3">Stół - jadalnia</option>
+                <option value="4">Stół - salon</option>
+                <option value="5">Krzesło</option>
+            </select>
+
+            <label for="in-amount">Ilość</label>
+            <input type="number" id="in-amount">
+
+            <label for="in-deadline">Termin</label>
+            <div class="calendar-events">
+                <div class="calendar">
+                    <div class="current-date">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <h2 class="month">Maj</h2>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="cal-weekdays">
+                        <li class="weekday">Pon</li>
+                        <li class="weekday">Wt</li>
+                        <li class="weekday">Śr</li>
+                        <li class="weekday">Czw</li>
+                        <li class="weekday">Pt</li>
+                        <li class="weekday">Sob</li>
+                        <li class="weekday">Nd</li>
+                    </ul>
+                    <ul class="month-days">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel-buttons">
+            <button class="save">Zapisz</button>
+            <button class="cancel">Anuluj</button>
+        </div>
+    </div>
+
+    <div class="edit-panel">
+        <h2>Wpisz nowe dane</h2>
+        <div class="edit-body">
+            <div class="edit-box">
+                <label for="new-customer">Zleceniodawca</label>
+                <input type="text" id="new-customer">
+            </div>
+            <div class="edit-box">
+                <label for="new-product">Wybierz produkt</label>
+                <select id="new-product" onchange="editProduct()">
+                    <option value="none" selected disabled>---Wybierz---</option>
+                    <option value="0">Stolik kawowy czarny</option>
+                    <option value="1">Stolik kawowy biały</option>
+                    <option value="2">Fotel</option>
+                    <option value="3">Stół - jadalnia</option>
+                    <option value="4">Stół - salon</option>
+                    <option value="5">Krzesło</option>
+                </select>
+            </div>
+            <div class="edit-box">
+                <label for="new-amount">Ilość</label>
+                <input type="number" id="new-amount">
+            </div>
+            <div class="edit-box">
+                <label for="new-deadline">Termin</label>
+                <input type="date" data-date="" data-date-format="DD MMMM YYYY" id="new-deadline">
+            </div>
+        </div>
+        <div class="edit-panel-btn">
+            <button class="save-btn">Zapisz</button>
+            <button class="cancel-btn">Anuluj</button>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/calendar.js"></script>
+
+</body>
+
+</html>

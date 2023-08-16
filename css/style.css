@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 900px;
+}
+
+body {
+  background-color: #eceaea;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ddd;
+}
+header h1 {
+  margin: 40px 0;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+header h1 i {
+  padding: 10px;
+  font-size: 48px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main .order-body {
+  width: 1200px;
+}
+main .order-body .control-buttons {
+  display: flex;
+  justify-content: end;
+  margin-top: 50px;
+}
+main .order-body .control-buttons button {
+  margin: 0 10px;
+  padding: 15px 20px;
+  background: #b4b3b3;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: color 0.5s background 0.5s;
+  cursor: pointer;
+}
+main .order-body .control-buttons button i {
+  padding: 0 10px;
+}
+main .order-body .control-buttons button:hover {
+  color: #fff;
+  background: linear-gradient(315deg, #696869 0%, #a9acad 74%);
+}
+main .order-body .order-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 130px;
+}
+main .order-body .order-list p {
+  margin: 5px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+main .order-body .order-list td {
+  padding: 10px 20px;
+  background-color: #a9acad;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+main .order-body .order-list tbody td {
+  background: none;
+  text-align: center;
+}
+main .order-body .order-list tbody .options button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+main .order-body .order-list tbody .options button i {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.order-panel {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(315deg, #696869 0%, #a9acad 74%);
+}
+.order-panel h2 {
+  margin-top: 50px;
+  font-size: 58px;
+  text-transform: uppercase;
+}
+.order-panel .inputs-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.order-panel .inputs-panel label {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.order-panel .inputs-panel input, .order-panel .inputs-panel select {
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 7px;
+}
+.order-panel .inputs-panel .calendar-events {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  z-index: 10;
+}
+.order-panel .inputs-panel .calendar-events .calendar {
+  width: 300px;
+  background-color: rgb(226, 225, 225);
+  border-radius: 15px;
+}
+.order-panel .inputs-panel .calendar-events .calendar .current-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background-color: rgb(44, 43, 43);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+}
+.order-panel .inputs-panel .calendar-events .calendar .current-date i {
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+}
+.order-panel .inputs-panel .calendar-events .calendar .current-date .fa-chevron-left::before,
+.order-panel .inputs-panel .calendar-events .calendar .current-date .fa-chevron-right::before {
+  font-size: 30px;
+}
+.order-panel .inputs-panel .calendar-events .calendar .current-date h2 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  font-size: 28px;
+}
+.order-panel .inputs-panel .calendar-events .calendar .cal-weekdays {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.order-panel .inputs-panel .calendar-events .calendar .cal-weekdays .weekday {
+  margin: 5px;
+  width: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.order-panel .inputs-panel .calendar-events .calendar .month-days {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+  list-style: none;
+  text-align: center;
+}
+.order-panel .inputs-panel .calendar-events .calendar .month-days .day, .order-panel .inputs-panel .calendar-events .calendar .month-days .inactive-day {
+  margin-top: 3px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(240, 238, 238);
+  font-size: 15px;
+  line-height: 40px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.order-panel .inputs-panel .calendar-events .calendar .month-days .inactive-day {
+  background-color: #a8a6a6;
+}
+.order-panel .inputs-panel .calendar-events .calendar .month-days .day:hover {
+  background-color: cadetblue;
+}
+.order-panel .inputs-panel .calendar-events .calendar .month-days .select-day {
+  background-color: lightcoral;
+}
+.order-panel .inputs-panel .show-calendar {
+  display: flex;
+}
+.order-panel .panel-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: none;
+  border: 3px solid rgb(48, 47, 47);
+  border-radius: 5px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.order-panel .panel-buttons button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.edit-panel {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  width: 900px;
+  background-color: #a8a6a6;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+.edit-panel h2 {
+  padding: 15px;
+  width: 100%;
+  background-color: #616060;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.edit-panel .edit-body {
+  display: flex;
+  margin: 30px 0;
+}
+.edit-panel .edit-body .edit-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 10px;
+}
+.edit-panel .edit-body .edit-box label {
+  margin: 10px;
+  font-size: 18px;
+}
+.edit-panel .edit-body .edit-box input, .edit-panel .edit-body .edit-box select {
+  padding: 10px;
+  border-radius: 5px;
+}
+.edit-panel .edit-panel-btn {
+  margin-bottom: 15px;
+}
+.edit-panel .edit-panel-btn button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
